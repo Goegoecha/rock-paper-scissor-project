@@ -23,6 +23,18 @@ function autoPlay() {
   }
 }
 
+function toggle() {
+  const buttonElement = document.querySelector('.js-auto-play-button');
+
+  if (buttonElement.innerText === 'AutoPlay On') {
+    buttonElement.innerHTML = 'AutoPlay Off';
+    buttonElement.classList.add('toggle-autoplay');
+  } else {
+    buttonElement.innerHTML = 'AutoPlay On';
+    buttonElement.classList.remove('toggle-autoplay');
+  }
+}
+
 document.querySelector('.js-rock-button').addEventListener('click', () => {
   playGame('rock');
 });
